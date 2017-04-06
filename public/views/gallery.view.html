@@ -2,14 +2,12 @@
     <h1>Most Popular Photos</h1>
     <div class="row gallery">
         <div class="col-md-3" ng-repeat="nme in names">
-           <a href="#"> <img class="main" ng-src="{{nme.profile_picture}}"></a>
+           <a ng-click="openLightboxModal($index)"><img class="main" ng-src="{{nme.profile_picture}}"></a>
             <div class="imgInfo">
-                <img class="avatar img-circle">{{nme.full_name}}</br>
-                
+                <img class="avatar img-circle">{{nme.full_name}} 
                 
             </div>
-        Follows: {{nme.counts.follows}},
-        FollowedBy: {{nme.counts.followed_by}}
+       
         </div>
     </div>
 </div>
